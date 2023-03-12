@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='website.html'></a>
+            </div>
+            <input type="checkbox" id="check">
+            <div>
+
+        </div>
+    
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+    
+    </header>
+    
+    <div class="sidebar">
+      <center>
+        <img src="ako.jpg" class="profile_image" alt="">
+        <h4>Sheryllene</h4>
+      </center>
+      <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <div class="content"></div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button>
+                    </li>
+                </ul>
+            </nav>
+            <form action="#" class="search-bar">
+                <input type="text" placeholder="search...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Email Id' required >
+		    <input type='password'class='input-field'placeholder='Enter Password' required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+		    <button type='submit'class='submit-btn'>Log in</button>
+		 </form>
+		 <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='First Name' required>
+		     <input type='text'class='input-field'placeholder='Last Name ' required>
+		     <input type='email'class='input-field'placeholder='Email Id' required>
+		     <input type='password'class='input-field'placeholder='Enter Password' required>
+		     <input type='password'class='input-field'placeholder='Confirm Password'  required>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and                                                   conditions</span>
+                    <button type='submit'class='submit-btn'>Register</button>
+	         </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        
+        }
+    </script>
+</body>
+</html>
